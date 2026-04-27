@@ -774,6 +774,14 @@ exe "hi! htmlTagName"       .s:fmt_bold .s:fg_blue   .s:bg_none
 exe "hi! htmlSpecialTagName".s:fmt_ital .s:fg_blue   .s:bg_none
 exe "hi! htmlArg"           .s:fmt_none .s:fg_base00 .s:bg_none
 exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
+
+exe "hi! htmlH1"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlH2"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlH3"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlH4"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlH5"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlH6"            .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlBold"          .s:fmt_bold .s:fg_base00 .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
@@ -1123,3 +1131,19 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 "
 " vim:foldmethod=marker:foldlevel=0
 "}}}
+"
+"
+
+"link below highlight groups to an appropriate group in above highlight group
+hi! link mkdBlockQuote pandocBlockQuote
+hi! link mkdDelimiter pandocLinkDelim
+hi! link mkdID Identifier
+hi! link mkdLineContinue pandocLineBreak
+hi! link mkdLink pandocLinkText
+hi! link mkdLinkDef pandocLinkDefinition
+hi! link mkdListItem pandocListMarker
+hi! link mkdNonListItemBlock pandocNormalBlock
+hi! link mkdRule pandocRule
+"hi! link mkdUrl pandocLinkURL
+hi! link mkdCode pandocCodeBlock
+hi! link mkdIndentCode pandocCodeBlock
